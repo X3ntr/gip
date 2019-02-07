@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>IT-Profile-Test</title>
+        <meta charset="utf-8" />
+		<!-- jquery -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> <!--  1.11.1 -->
+		
+		<!-- plugins -->
+		<!--  <script src="//cdn.jsdelivr.net/headroomjs/0.7.0/headroom.min.js"></script>
+		<script src="//cdn.jsdelivr.net/headroomjs/0.7.0/angular.headroom.min.js"></script>
+		<script src="//cdn.jsdelivr.net/headroomjs/0.7.0/jQuery.headroom.min.js"></script>
+		<script src="jquery.onepage-scroll.min.js"></script>  -->
+		
+		<!-- jquery ui -->
+		<script src="//code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
+		<script src="//code.jquery.com/color/jquery.color.plus-names-2.1.2.min.js"></script>
+		<script type="text/javascript" src="/theme/jQuery/jquery.fullPage.min.js"></script>
+		<!-- css -->
+		<link href='http://fonts.googleapis.com/css?family=Orbitron:900' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="/theme/css/jquery.fullPage.css" />
+        <link rel="stylesheet" href="/theme/css/main.css" type="text/css" />
+		
+        <link href="/" type="application/atom+xml" rel="alternate" title="home ATOM Feed" />
+		
+		<!-- <script>
+		$(window).load(function() {
+		window.setTimeout(function(){
+        $('body').removeClass("loading").addClass('loaded');
+		}, 9000);
+		});
+		</script> -->
+</head>
+
+<body class="loading">
+<header>
+	<nav class="js ts headroom--top" id="nav-full">
+		<ul class="va">
+			<li data-menuanchor="home" class="active"><a href="/index.html">Home</a></li>
+                <li data-menuanchor="About"><a href="/pages/about.html">About</a></li>
+                <li data-menuanchor="IT-Autobiography"><a href="/pages/it-autobiography.html">IT-Autobiography</a></li>
+                <li data-menuanchor="IT-Profile"><a href="/pages/it-profile.html">IT-Profile</a></li>
+                <li data-menuanchor="IT-Profile-Test"><a href="/pages/it-profile-test.html">IT-Profile-Test</a></li>
+                <li data-menuanchor="Workflow"><a href="/pages/workflow.html">Workflow</a></li>
+        </ul>
+	<nav>
+</header>
+	
+<!--  <header class="pages">
+    <h1 id="page-title">IT-Profile-Test</h1>
+    <span id="sitename"><a href="" id="site-title">home </a></span>
+</header>  -->
+<article class="pages">  <!--  class section -->
+    <p>Mijn vaardigheden in een notendop.  </p>
+<div id"fullpage">
+    <div class="section">
+        <div class="slide">
+
+
+
+        </div>
+
+<div class="highlight"><pre>    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;slide&quot;</span><span class="nt">&gt;</span>
+
+
+
+    <span class="nt">&lt;/div&gt;</span>
+
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;slide&quot;</span><span class="nt">&gt;</span>
+
+
+
+    <span class="nt">&lt;/div&gt;</span>
+
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;slide&quot;</span><span class="nt">&gt;</span>
+
+
+
+    <span class="nt">&lt;/div&gt;</span>
+
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;slide&quot;</span><span class="nt">&gt;</span>
+
+
+
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+
+
+</div>
+</article>
+</body>
+
+<script>
+	$("#nav-full").mouseenter(function(){
+	$(this).animate({backgroundColor: "rgba(0,0,0,0.3)"}, "slow");
+	})
+	.mouseleave(function() {
+	$(this).animate({backgroundColor: "transparent"}, "slow");
+	});
+	
+	//.find("element")
+	$(".underline").hover(function() {
+	$(this).animate({
+		borderBottom: '2px dashed #8b0b0b',
+		
+		}, 500);
+	});
+		
+	<!--  test fullpage  -->
+	$(document).ready(function() {
+      var pepe = $.fn.fullpage({
+	  loopHorizontal: true,
+	  slidesNaigation: true,
+	  slidesNavPosition: 'bottom'
+      });
+    });
+</script>
+
+</html>

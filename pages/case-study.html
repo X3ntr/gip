@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>Case-Study</title>
+        <meta charset="utf-8" />
+		<!-- jquery -->
+		<!-- <script type="text/javascript" src="/theme/jQuery/jquery.slimscroll.min.js"></script> -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		
+		<!-- jquery ui -->
+		<script src="//code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
+		<script src="//code.jquery.com/color/jquery.color.plus-names-2.1.2.min.js"></script>
+		
+		<!-- plugins -->
+		<script type="text/javascript" src="/theme/jQuery/jquery.fullPage.min.js"></script>
+
+		<!-- css -->
+		<link href='http://fonts.googleapis.com/css?family=Orbitron:900' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" media="only screen and (max-width: 480px), only screen and (max-device-width: 480px)" href="/theme/css/main-mobile.css" />
+		<link rel="stylesheet" href="/theme/css/jquery.fullPage.css" type="text/css" />
+        <link rel="stylesheet" href="/theme/css/main.css" type="text/css" />
+		
+        <link href="/" type="application/atom+xml" rel="alternate" title="home ATOM Feed" />
+		
+		<!-- <script>
+		$(window).load(function() {
+		window.setTimeout(function(){
+        $('body').removeClass("loading").addClass('loaded');
+		}, 9000);
+		});
+		</script> -->
+		
+		<!-- initialize fullpage.js on index.html -->
+		<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				'verticalCentered': false,
+				navigation: true,
+				slidesNavigation: true,
+				slidesNavPosition: 'bottom',
+				continuousVertical: true,
+			});
+		});
+	</script>
+	
+</head>
+
+<body class="loading">
+<header>
+	<nav class="push-menu-left" id="nav-full">
+		<ul class="nav-container">
+			<li id="open" class="hidden"><a class="nav-toggler toggle-push-left">Menu</a></li>
+			<li id="close" class="hidden"><a class="close-menu">&larr; Close</a></li>
+			<li id="homepage"><a href="/index.html">Home</a></li>
+                <li id="About"><a href="/pages/about.html">About</a></li>
+                <li id="Case-Study"><a href="/pages/case-study.html">Case-Study</a></li>
+                <li id="Economische-analyse"><a href="/pages/economische-analyse.html">Economische-analyse</a></li>
+                <li id="Filmpje"><a href="/pages/filmpje.html">Filmpje</a></li>
+                <li id="Huisstijl"><a href="/pages/huisstijl.html">Huisstijl</a></li>
+                <li id="IT-Autobiography"><a href="/pages/it-autobiography.html">IT-Autobiography</a></li>
+                <li id="IT-Profile"><a href="/pages/it-profile.html">IT-Profile</a></li>
+                <li id="OOP-Analyse"><a href="/pages/oop-analyse.html">OOP-Analyse</a></li>
+                <li id="Stage"><a href="/pages/stage.html">Stage</a></li>
+                <li id="Stage en entreprise"><a href="/pages/stage-en-entreprise.html">Stage en entreprise</a></li>
+                <li id="Teacher Aid"><a href="/pages/teacher-aid.html">Teacher Aid</a></li>
+                <li id="Workflow"><a href="/pages/workflow.html">Workflow</a></li>
+        </ul>
+	<nav>
+</header>
+<div id="fullpage">
+	
+<!--  <header class="pages">
+    <h1 id="page-title">Case-Study</h1>
+    <span id="sitename"><a href="" id="site-title">home </a></span>
+</header>  -->
+<div class="pages fp-scrollable">  <!--  class section removed -->
+    <h2>Case-Study: SAN, NAS &amp; DAS</h2>
+<h3>RAID</h3>
+<p>RAID of Redundant Array of Independent Disks combineert verschillende schijven tot, wat door het besturingssysteem gezien wordt als, 1 grote schijf.<br />
+Nieuwere besturingssystemen ondersteunen bepaalde RAID configuraties en zelfs software kan enkele RAID-configuraties regelen. Dit vraagt wel veel van de processor en daarom wordt vaak een RAID-controller gebruikt voor intensieve opstellingen.</p>
+<p>Er zijn verschillende niveaus van RAID-configuraties, die ook nog eens gecombineerd kunnen worden. Zo wordt een combinatie van RAID-0 en RAID-1 RAID-10.</p>
+<p>Hybride RAID kan schijven in verschillende RAID-configuraties zetten naargelang de grootte. Zo kan de eerste 1TB van twee schijven in RAID-1 worden geconfigureerd en de overige 2TB in RAID-0.</p>
+<p>De bedoeling van RAID is om opslag sneller en/of veiliger te maken door middel van foutcorrectie, het voorkomen van dataverlies door het uitvallen van een schijf of in geval van snelheid data te schrijven naar meerdere schijven tegelijkertijd.</p>
+<p>RAID wordt vaak toegepast in systemen zoals SAN, NAS en DAS.</p>
+<h3>SAN</h3>
+<p>Een Storage Area Network (SAN) is een dedicated netwerk dat voor de verbinding zorgt tussen verschillende servers en een grote hoeveelheid gedeelde opslagruimte.<br />
+In essentie brengt SAN verschillende DAS samen door middel van een netwerk.</p>
+<p>Een SAN bestaat uit:</p>
+<ul>
+<li><strong>Storage Arrays</strong><ul>
+<li><strong>Physical Disks</strong> zoals HDD of SSD. (SATA, SAS, FC,...)</li>
+<li><strong>Disk Enclosures</strong> hier worden de schijven in geplaatst. Ze voorzien de schijven van elektriciteit en data connectors.</li>
+<li><strong>Storage Controllers/Processors</strong> zij beheren I/O, RAID en caching.</li>
+<li><strong>Storage Pools</strong> zijn een hoop opslag ruimte vaak bestaande uit meerdere schijven in RAID. Hiervan kunnen LUNs worden gemaakt.</li>
+<li><strong>Logical Unit Numbers (LUNs)</strong> een deel van een Storage Pool dat beschikbaar is gemaakt voor (een) server(s). Dit wordt door de server gezien als een gewoon opslag medium.</li>
+</ul>
+</li>
+<li><strong>Tape libraries</strong> (gebruikt voor backups)</li>
+<li><strong>Communications Network</strong> dit zorgt voor de toegang tot de data voor de servers<ul>
+<li><strong>Fibre Channel</strong></li>
+<li><strong>iSCSI</strong></li>
+<li><strong>FCoE</strong></li>
+<li><strong>InfiniBand</strong></li>
+</ul>
+</li>
+<li><strong>Host Bus Adapters (HBAs)</strong> de adapters die de servers gebruiken om met het netwerk te connecteren. Dit kan een standaard ethernet kaart zijn of een dedicated kaart voor FC of iSCSI.</li>
+</ul>
+<p>SAN offert low-level data toegang en laat de rest over aan het besturingssysteem van de client. Dit zorgt voor een snelheidstoename.</p>
+<p>Naast opslag zorgt SAN ook voor:</p>
+<ul>
+<li>Fout tolerantie zowel voor data als voor voedingen en connecties.</li>
+<li>Dynamische opslag door het creeren van LUNs kan opslagplaats worden vergroot, verkleint, verplaatst naar een andere schijf of server, of worden vernietigt.</li>
+<li>Performantie</li>
+<li>Storage-level replicatie Storage Arrays kunnen worden geconfigureerd voor synchrone replicatie om fouten te voorkomen.</li>
+<li>Storage-level snapshots</li>
+<li>Storage-level backups</li>
+</ul>
+<h4>Fibre Channel</h4>
+<p>Een SAN met een Fibre Channel netwerk bestaat uit The Fabric, dit zijn fibre channel switches. 
+Een fibre channel switch bevat een Name Server (NS), dit is een tabel waarin de 64-bit WWN adressen van de nodes worden gekoppeld aan hun 24-bit fabric adres en worden bewaard. 
+Verder hebben de nodes in het netwerk een HBA met een 64-bit WWN adres (vergelijkbaar met MAC-adres) dat wordt ingesteld door de fabrikant maar dat door de gebruiker gewijzigd kan worden, een 24-bit fabric adres dat wordt uitgedeeld bij het inloggen (FLOGI) en beheerd door The Fabric, een poort associatie en een 8-bit poort ID (node).</p>
+<h4>Beveiliging</h4>
+<p>Een SAN is meestal ontworpen met het idee dat authenticatie al heeft plaatsgevonden in een eerdere fase binnen het netwerk. 
+Desalniettemin bieden protocollen zoals Fibre Channel Authentication Protocol (FCAP), Diffie-Hielman CHAP (DH-CHAP) en Fibre Channel Security Protocol (FC-SP) toch een vorm van lowlevel netwerk authenticatie.<br />
+Encryptie bestaat niet in een SAN omgeving, tenzij er een third-party tool wordt gebruikt. Dit komt omdat encryptie de snelheid van een SAN enorm zou doen afnemen.  </p>
+<p>Een Fibre netwerk gebruikt frames, net zoals een IP netwerk packets, om te communiceren tussen verschillende nodes en is dus ook meestal kwetsbaar voor dezelfde soort aanvallen. Verder is de communicatie Clear-Text wat het voor een aanvaller heel gemakkelijk maakt om informatie te verzamelen.</p>
+<p>Opbouw van het Fibre Channel protocol:<br />
+<img alt="Fibre Channel Protocol" src="/theme/css/images/fibrechannel.jpg" title="Fibre Channel Protocol" />  </p>
+<p>Layer 2 van het Fibre Channel protocol wordt het meest aangevallen en is opgebouwd uit:</p>
+<ul>
+<li><strong>Source Address</strong> (S_ID) (24-bit)</li>
+<li><strong>Destination Address</strong> (D_ID) (24-bit)</li>
+<li><strong>Sequence ID</strong> (SEQ_ID) (statisch)</li>
+<li><strong>Sequence Count</strong> (SEQ_CNT) (verhoogd met 1)</li>
+<li><strong>Exchange ID</strong> (max aantal frames in 1 keer)</li>
+<li><strong>Originator Exchange ID</strong> (OX_ID) (info verzender)</li>
+<li><strong>Recipient Exchange ID</strong> (RX_ID) (info ontvanger)</li>
+<li><strong>Type</strong> (de byte sectie van de bovenliggende layer)</li>
+<li><strong>Routing Control</strong> (R_CTL)</li>
+</ul>
+<p><img alt="Fibre Channel Protocol" src="/theme/css/images/fibrechannel2.jpg" title="Fibre Channel Protocol" />  </p>
+<p>De meest voorkomende aanvallen op een SAN zijn:</p>
+<ul>
+<li>Session hijacking</li>
+<li>Man-in-the-middle attack</li>
+<li>Name server pollution</li>
+<li>WWN spoofing</li>
+<li>LUN masking attacks</li>
+<li>Zone hopping</li>
+<li>Switch attacks<ul>
+<li>E-Port replicatiin</li>
+<li>Cut-Through switching</li>
+<li>Web Management</li>
+</ul>
+</li>
+</ul>
+<h4>Maatregelen</h4>
+<ul>
+<li>Hard Zoning Based on Physical Ports<ul>
+<li>Het afschermen van andere nodes op poort level</li>
+</ul>
+</li>
+<li>Port Binding (Locking)<ul>
+<li>Koppelen van een fysieke poort met een geautoriseerde WWN</li>
+</ul>
+</li>
+<li>Port-type Controls<ul>
+<li>Geeft een gegeven fysieke poort een specifiek type (G-port, E-port, F-port)</li>
+</ul>
+</li>
+<li>Switch Layer Authentication Protocol (SLAP)<ul>
+<li>Switch naar switch authenticatie met behulp van certificaten en private keys</li>
+</ul>
+</li>
+<li>Fabric Membership Authorization<ul>
+<li>Slaat een database op op elke switch met geautoriseerde WWNs die aan The Fabric mogen worden toegevoegd</li>
+</ul>
+</li>
+<li>Fabric Configuration Servers<ul>
+<li>Zorgt voor 1 switch die alle andere switches beheerd met zijn eigen databse</li>
+</ul>
+</li>
+</ul>
+<p><img alt="SAN" src="/theme/css/images/san.jpg" title="SAN" />  </p>
+<h4>Voor- en nadelen</h4>
+<p>Centraal beheer en monitoring.<br />
+Een SAN is gemakkelijk van op afstand centraal te beheren waardoor het niet nodig is om fysiek in de serverruimte aanwezig te zijn.  </p>
+<p>Effectief schijfgebruik.  </p>
+<p>Enorme snelheidswinst.<br />
+Doordat data niet over het gewone netwerk moet worden getransporteerd maar over een dedicated netwerk van fibre, is er een enorme toename aan snelheid.  </p>
+<p>Bescherming tegen dataverlies.<br />
+De schijven van een SAN kunnen worden gecloned en gesynchroniseerd waardoor er een backup is of de data die verloren is gegaan kan worden gerecovered.  </p>
+<p>Geen downtime bij het vervangen of toevoegen van harde schijven.  </p>
+<p>Hoge kosten voor hardware en software.<br />
+De prijzen van de netwerk en storage array hardware kunnen oplopen tot in de duizenden euro's.  </p>
+<p>Cloud opslag is vaak voordeliger qua prijs maar misschien minder veilig?  </p>
+<p>Een SAN heeft geen bestandssysteem dus licenties nodig voor clients in geval van Windows. (bijkomende kosten)  </p>
+<p>Een SAN configureren en opzetten wordt gedaan door gespecialiseerde mensen.  </p>
+<h3>NAS</h3>
+<p>Network-attached Storage (NAS) is een opslag medium dat bestaat uit verschillende harde schijven of andere opslag media die vaak in RAID staan opgesteld en bereikbaar is via een netwerk. 
+Een NAS is eigenlijk een volwaardige fileserver, het bestandssysteem wordt beheerd door de NAS zelf.</p>
+<p>Een NAS wordt speciaal gebouwd en dient niet als een general-purpose server. Ze beschikken niet over een keyboard/muis of monitor maar worden geconfigureerd via een netwerk interface, vaak in een browser.</p>
+<p>NAS maakt gebruik van het TCP/IP protocol voor de verbinding tussen data en clients. Dit betekent dat een NAS bereikbaar is voor alle servers, clients, mobiele apparaten in dat netwerk.
+De toegang en het opvragen van de data zelf wordt verzorgd door 1 van de volgende protocollen:</p>
+<ul>
+<li><strong>NFS</strong></li>
+<li><strong>SMB/CIFS</strong></li>
+<li><strong>AFP</strong></li>
+<li><strong>AFS</strong></li>
+<li><strong>FTP</strong></li>
+<li><strong>SFTP</strong></li>
+<li><strong>(HTTP)</strong></li>
+<li><strong>(UPnP)</strong></li>
+<li><strong>(rsync)</strong></li>
+</ul>
+<p>Net zoals bij een DAS kunnen harde schijven worden toegevoegd of verwijderd zonder dataverlies of downtime om de opslag uit te breiden of kapotte schijven te vervangen.
+Verschillende NAS' kunnen onderling worden gekoppeld.</p>
+<p>Sommige NAS-systemen hebben nog extra functies zoals:</p>
+<ul>
+<li>Printserver</li>
+<li>Webserver</li>
+<li>FTP-server (voor externe toegang tot data)</li>
+<li>Streaming Media-server</li>
+<li>Back-up-server</li>
+<li>BitTorrent-client</li>
+<li>Cloudopslagfuncties</li>
+</ul>
+<p>De besturingssystemen van een NAS zijn geoptimaliseerd voor opslag en verbruiken daarom vaak minder energie of systeembronnen.  </p>
+<p>De beveiliging van data op een NAS hangt voor een groot deel af van de veiligheid van het netwerk zelf en maakt gebruik van Microsoft's Active Directory om toegang tot data te verlenen gebaseerd op gebruikersnaam en paswoord.</p>
+<p><img alt="NAS" src="/theme/css/images/nas.png" title="NAS" />  </p>
+<h4>Voor- en nadelen</h4>
+<p>Een NAS kan worden gebruikt door verschillende platformen.<br />
+Elk apparaat dat verbonden is met het netwerk kan aan de data.<br />
+Een NAS beschikt vaak over een optionele netwerk printer en dergelijke toepassingen.<br />
+Een NAS is van buitenaf toegankelijk via FTP<br />
+Het besturingssysteem van een NAS is geoptimaliseerd om weinig energie te verbruiken.<br />
+Een NAS beschikt over een eigen besturingssysteem.  </p>
+<p>Een NAS is duur.<br />
+Netwerk prestaties kunnen dalen door intensief gebruik.<br />
+Zekere kennis vereist voor het optimaal configureren.  </p>
+<h3>DAS</h3>
+<p>Direct-attached Storage (DAS) is opslag rechtstreeks verbonden met een server of client zonder een netwerk ertussen. 
+DAS bestaat uit een reeks van opslag media zoals harde schijven die vaak in een RAID-configuratie zijn opgesteld. 
+Deze zijn via een Host Bus Adapter (HBA) verbonden met de server of client.</p>
+<p>De voornaamste protocollen die DAS gebruikt zijn:</p>
+<ul>
+<li><strong>ATA</strong></li>
+<li><strong>SATA</strong></li>
+<li><strong>eSATA</strong></li>
+<li><strong>SCSI</strong></li>
+<li><strong>SAS</strong></li>
+<li><strong>Fibre Channel (FC)</strong></li>
+</ul>
+<p>DAS kan door meerdere servers of clients tegelijkertijd worden gebruikt. Ook kan een harde schijf in een DAS vervangen worden zonder enig dataverlies of downtime.</p>
+<p><img alt="DAS" src="/theme/css/images/das.png" title="DAS" />  </p>
+<h4>Voor- en nadelen</h4>
+<p>Enkel bereikbaar voor de rechtstreeks aangesloten machines.<br />
+Niet alle schijven worden benut.  </p>
+<p>Veel opslag ruimte.<br />
+Bescherming tegen dataverlies en snelheidswinst.<br />
+Geen downtime bij het vervangen of toevoegen van extra harde schijven.  </p>
+<h3>Toepassing</h3>
+<h4>Waarom?</h4>
+<p>Een ziekenhuis moet enorm veel data opslaan en verwerken tegen een grote snelheid. Een SAN was dus de perfecte oplossing. AZ Herentals heeft twee SANs van Oracle.  </p>
+<h4>Overstappen?</h4>
+<p>Nee  </p>
+<h4>Alternatieven?</h4>
+<p>Alternatieven zijn NAS en Cloudopslag, maar beide brengen meer nadelen met zich mee dan voordelen.  </p>
+<h4>Kosten vergeleken met alternatieven?</h4>
+<p>NAS is goedkoper dan SAN omdat naast de aankoop van de storage hardware ook nog een netwerk nodig is. Beide kunnen oplopen tot in de duizenden euro's.<br />
+Cloud opslag is duurder over langere tijd.  </p>
+<p>Bronnen:<br />
+<a href="http://searchstorage.techtarget.com/definition/storage-area-network-SAN">searchstorage.techtarget.com</a><br />
+<a href="http://nl.wikipedia.org/wiki/Redundant_array_of_independent_disks">Wikipedia</a><br />
+<a href="http://en.wikipedia.org/wiki/Direct-attached_storage">Wikipedia</a><br />
+<a href="http://nl.wikipedia.org/wiki/Network-attached_storage">Wikipedia</a><br />
+<a href="http://en.wikipedia.org/wiki/Storage_area_network">Wikipedia</a><br />
+<a href="http://serverfault.com/questions/425335/what-is-a-storage-area-network-and-which-benefits-does-it-have-over-different-s">serverfault.com</a><br />
+<a href="http://sqlmag.com/blog/why-do-people-purchase-san-over-das">sqlmaq.com</a><br />
+<a href="http://cdn.ttgtmedia.com/searchStorageChannel/downloads/Dwivedi_ch02.pdf">cdn.ttqtmedia.com</a><br />
+<a href="http://www.blackhat.com/presentations/bh-usa-03/bh-us-03-dwivedi.pdf">blackhat.com</a></p>
+</div>
+</div>
+</body>
+
+<script>
+	//accent menu on hover
+	/*$("#nav-full").mouseenter(function(){
+	$(this).animate({backgroundColor: "rgba(0,0,0,0.85)"}, "slow");
+	})
+	.mouseleave(function() {
+	$(this).animate({backgroundColor: "transparent"}, "slow");
+	});*/
+	
+	$("#nav-full").hover(
+	function() {
+	$(this).stop().animate({ backgroundColor: "rgba(0,0,0,0.85)"}, "slow");
+	},
+	function() {
+	$(this).stop().animate({ backgroundColor: "transparent"}, "slow"); 
+	});
+	
+	//hide header on scroll
+	$(function(){
+	var lastScrollTop = 0, delta = 5;
+	$(window).scroll(function(event){
+    var st = $(this).scrollTop();
+
+    if(Math.abs(lastScrollTop - st) <= delta)
+       return;
+
+    if (st > lastScrollTop){
+        // downscroll code
+        $("#nav-full").css({top:'-120px'})
+       //.hover(function(){$("#nav-full").css({top:'0px'})})
+    } else {
+       // upscroll code
+       $("#nav-full").css({top:'0px'});
+    }
+    lastScrollTop = st;
+	});
+	});
+	
+	//mobile menu
+	(function( window ){
+
+    var body = document.body,
+        mask = document.createElement("div"),
+        togglePushLeft = document.querySelector( ".toggle-push-left" ),
+        pushMenuLeft = document.querySelector( ".push-menu-left" ),
+        activeNav
+    ;
+    mask.className = "mask";
+	
+	//push menu left
+    togglePushLeft.addEventListener( "click", function(){
+        classie.add( body, "pml-open" );
+        document.body.appendChild(mask);
+        activeNav = "pml-open";
+    } );
+	
+	//hide active menu if mask is clicked
+    mask.addEventListener( "click", function(){
+        classie.remove( body, activeNav );
+        activeNav = "";
+        document.body.removeChild(mask);
+    } );
+
+    //hide active menu if close menu button is clicked
+    [].slice.call(document.querySelectorAll(".close-menu")).forEach(function(el,i){
+        el.addEventListener( "click", function(){
+            classie.remove( body, activeNav );
+            activeNav = "";
+            document.body.removeChild(mask);
+        } );
+    });
+
+})( window );
+
+
+</script>
+
+</html>

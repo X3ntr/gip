@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>home</title>
+        <meta charset="utf-8" />
+		<!-- jquery -->
+		<!-- <script type="text/javascript" src="/theme/jQuery/jquery.slimscroll.min.js"></script> -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		
+		<!-- jquery ui -->
+		<script src="//code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
+		<script src="//code.jquery.com/color/jquery.color.plus-names-2.1.2.min.js"></script>
+		
+		<!-- plugins -->
+		<script type="text/javascript" src="/theme/jQuery/jquery.fullPage.min.js"></script>
+
+		<!-- css -->
+		<link href='http://fonts.googleapis.com/css?family=Orbitron:900' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" media="only screen and (max-width: 480px), only screen and (max-device-width: 480px)" href="/theme/css/main-mobile.css" />
+		<link rel="stylesheet" href="/theme/css/jquery.fullPage.css" type="text/css" />
+        <link rel="stylesheet" href="/theme/css/main.css" type="text/css" />
+		
+        <link href="/" type="application/atom+xml" rel="alternate" title="home ATOM Feed" />
+		
+		<!-- <script>
+		$(window).load(function() {
+		window.setTimeout(function(){
+        $('body').removeClass("loading").addClass('loaded');
+		}, 9000);
+		});
+		</script> -->
+		
+		<!-- initialize fullpage.js on index.html -->
+		<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				'verticalCentered': false,
+				navigation: true,
+				slidesNavigation: true,
+				slidesNavPosition: 'bottom',
+				continuousVertical: true,
+			});
+		});
+	</script>
+	
+</head>
+
+<body class="loading">
+<header>
+	<nav class="push-menu-left" id="nav-full">
+		<ul class="nav-container">
+			<li id="open" class="hidden"><a class="nav-toggler toggle-push-left">Menu</a></li>
+			<li id="close" class="hidden"><a class="close-menu">&larr; Close</a></li>
+			<li id="homepage"><a href="/index.html">Home</a></li>
+                <li id="About"><a href="/pages/about.html">About</a></li>
+                <li id="Case-Study"><a href="/pages/case-study.html">Case-Study</a></li>
+                <li id="Economische-analyse"><a href="/pages/economische-analyse.html">Economische-analyse</a></li>
+                <li id="Filmpje"><a href="/pages/filmpje.html">Filmpje</a></li>
+                <li id="Huisstijl"><a href="/pages/huisstijl.html">Huisstijl</a></li>
+                <li id="IT-Autobiography"><a href="/pages/it-autobiography.html">IT-Autobiography</a></li>
+                <li id="IT-Profile"><a href="/pages/it-profile.html">IT-Profile</a></li>
+                <li id="OOP-Analyse"><a href="/pages/oop-analyse.html">OOP-Analyse</a></li>
+                <li id="Stage"><a href="/pages/stage.html">Stage</a></li>
+                <li id="Stage en entreprise"><a href="/pages/stage-en-entreprise.html">Stage en entreprise</a></li>
+                <li id="Teacher Aid"><a href="/pages/teacher-aid.html">Teacher Aid</a></li>
+                <li id="Workflow"><a href="/pages/workflow.html">Workflow</a></li>
+        </ul>
+	<nav>
+</header>
+<div id="fullpage">
+	
+<ul>
+</ul>
+</div>
+</body>
+
+<script>
+	//accent menu on hover
+	/*$("#nav-full").mouseenter(function(){
+	$(this).animate({backgroundColor: "rgba(0,0,0,0.85)"}, "slow");
+	})
+	.mouseleave(function() {
+	$(this).animate({backgroundColor: "transparent"}, "slow");
+	});*/
+	
+	$("#nav-full").hover(
+	function() {
+	$(this).stop().animate({ backgroundColor: "rgba(0,0,0,0.85)"}, "slow");
+	},
+	function() {
+	$(this).stop().animate({ backgroundColor: "transparent"}, "slow"); 
+	});
+	
+	//hide header on scroll
+	$(function(){
+	var lastScrollTop = 0, delta = 5;
+	$(window).scroll(function(event){
+    var st = $(this).scrollTop();
+
+    if(Math.abs(lastScrollTop - st) <= delta)
+       return;
+
+    if (st > lastScrollTop){
+        // downscroll code
+        $("#nav-full").css({top:'-120px'})
+       //.hover(function(){$("#nav-full").css({top:'0px'})})
+    } else {
+       // upscroll code
+       $("#nav-full").css({top:'0px'});
+    }
+    lastScrollTop = st;
+	});
+	});
+	
+	//mobile menu
+	(function( window ){
+
+    var body = document.body,
+        mask = document.createElement("div"),
+        togglePushLeft = document.querySelector( ".toggle-push-left" ),
+        pushMenuLeft = document.querySelector( ".push-menu-left" ),
+        activeNav
+    ;
+    mask.className = "mask";
+	
+	//push menu left
+    togglePushLeft.addEventListener( "click", function(){
+        classie.add( body, "pml-open" );
+        document.body.appendChild(mask);
+        activeNav = "pml-open";
+    } );
+	
+	//hide active menu if mask is clicked
+    mask.addEventListener( "click", function(){
+        classie.remove( body, activeNav );
+        activeNav = "";
+        document.body.removeChild(mask);
+    } );
+
+    //hide active menu if close menu button is clicked
+    [].slice.call(document.querySelectorAll(".close-menu")).forEach(function(el,i){
+        el.addEventListener( "click", function(){
+            classie.remove( body, activeNav );
+            activeNav = "";
+            document.body.removeChild(mask);
+        } );
+    });
+
+})( window );
+
+
+</script>
+
+</html>

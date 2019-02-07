@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>Teacher Aid</title>
+        <meta charset="utf-8" />
+		<!-- jquery -->
+		<!-- <script type="text/javascript" src="/theme/jQuery/jquery.slimscroll.min.js"></script> -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		
+		<!-- jquery ui -->
+		<script src="//code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
+		<script src="//code.jquery.com/color/jquery.color.plus-names-2.1.2.min.js"></script>
+		
+		<!-- plugins -->
+		<script type="text/javascript" src="/theme/jQuery/jquery.fullPage.min.js"></script>
+
+		<!-- css -->
+		<link href='http://fonts.googleapis.com/css?family=Orbitron:900' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" media="only screen and (max-width: 480px), only screen and (max-device-width: 480px)" href="/theme/css/main-mobile.css" />
+		<link rel="stylesheet" href="/theme/css/jquery.fullPage.css" type="text/css" />
+        <link rel="stylesheet" href="/theme/css/main.css" type="text/css" />
+		
+        <link href="/" type="application/atom+xml" rel="alternate" title="home ATOM Feed" />
+		
+		<!-- <script>
+		$(window).load(function() {
+		window.setTimeout(function(){
+        $('body').removeClass("loading").addClass('loaded');
+		}, 9000);
+		});
+		</script> -->
+		
+		<!-- initialize fullpage.js on index.html -->
+		<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				'verticalCentered': false,
+				navigation: true,
+				slidesNavigation: true,
+				slidesNavPosition: 'bottom',
+				continuousVertical: true,
+			});
+		});
+	</script>
+	
+</head>
+
+<body class="loading">
+<header>
+	<nav class="push-menu-left" id="nav-full">
+		<ul class="nav-container">
+			<li id="open" class="hidden"><a class="nav-toggler toggle-push-left">Menu</a></li>
+			<li id="close" class="hidden"><a class="close-menu">&larr; Close</a></li>
+			<li id="homepage"><a href="/index.html">Home</a></li>
+                <li id="About"><a href="/pages/about.html">About</a></li>
+                <li id="Case-Study"><a href="/pages/case-study.html">Case-Study</a></li>
+                <li id="Economische-analyse"><a href="/pages/economische-analyse.html">Economische-analyse</a></li>
+                <li id="Filmpje"><a href="/pages/filmpje.html">Filmpje</a></li>
+                <li id="Huisstijl"><a href="/pages/huisstijl.html">Huisstijl</a></li>
+                <li id="IT-Autobiography"><a href="/pages/it-autobiography.html">IT-Autobiography</a></li>
+                <li id="IT-Profile"><a href="/pages/it-profile.html">IT-Profile</a></li>
+                <li id="OOP-Analyse"><a href="/pages/oop-analyse.html">OOP-Analyse</a></li>
+                <li id="Stage"><a href="/pages/stage.html">Stage</a></li>
+                <li id="Stage en entreprise"><a href="/pages/stage-en-entreprise.html">Stage en entreprise</a></li>
+                <li id="Teacher Aid"><a href="/pages/teacher-aid.html">Teacher Aid</a></li>
+                <li id="Workflow"><a href="/pages/workflow.html">Workflow</a></li>
+        </ul>
+	<nav>
+</header>
+<div id="fullpage">
+	
+<!--  <header class="pages">
+    <h1 id="page-title">Teacher Aid</h1>
+    <span id="sitename"><a href="" id="site-title">home </a></span>
+</header>  -->
+<div class="pages fp-scrollable">  <!--  class section removed -->
+    <h2>Teacher Aid</h2>
+<h3>Teacher Aid lagere school</h3>
+<p>Ik heb samen met <a href="http://5i-2014-07-danteg.github.io" target="_blank" rel="external">Dante Goffa</a> en <a href="https://jeroentondeleir.github.io" target="_blank" rel="external">Jeroen Tondeleir</a> een sessie voorbereid om aan de leerkrachten van de lagere school de functies en werking van het <em>SmartBoard</em> uit te leggen.<br />
+Wij hadden de leerkrachten van het tweede leerjaar.  </p>
+<p>Ik vond de sessie zelf ook best informatief omdat ik zelf nog niet zo goed met een <em>SmartBoard</em> kon werken. De presentatie verliep zeer vlot en we hebben uiteindelijk meer informatie gegeven dan oorsprongkelijk bedoeld. 
+Door een tekort aan tijd hebben we niet al de vragen kunnen beantwoorden.  </p>
+<h3>IT-tapa</h3>
+<p>De bedoeling van IT-tapa is om als leerling uitleg te komen geven aan leerkrachten over een aangevraagd onderwerp. Dit jaar heb ik samen met <a href="http://christophvangeertsom.github.io/TeacherAidMiddagsessie" target="_blank" rel="external">Christoph Van Geertsom</a> 
+het onderwerp "Testen met Google Forms en Office365" voorbereid en gegeven.<br />
+Wij hebben ook verschillende instructie filmpjes gemaakt en online gezet op YouTube die je onderaan terug kan vinden evenals onze Facebook pagina.  </p>
+<p>Onze IT-tapa is heel snel gegaan, maar ondanks de gelimiteerde tijd en een technische probleempje hebben we zowel Google Forms als Office365 uitgelegd.  </p>
+<p>Facebook: <a href="https://www.facebook.com/pages/IT-tapa/588405757863108?fref=ts" target="_blank" rel="external">IT-tapa</a><br />
+Instructiefilmpjes: <a href="https://www.youtube.com/watch?v=enErh-qM7Mo&feature=youtu.be" target="_blank" rel="external">Office365</a> &amp; <a href="https://www.youtube.com/watch?v=wwRGT6iiEHE" target="_blank" rel="external">Google Forms</a></p>
+</div>
+</div>
+</body>
+
+<script>
+	//accent menu on hover
+	/*$("#nav-full").mouseenter(function(){
+	$(this).animate({backgroundColor: "rgba(0,0,0,0.85)"}, "slow");
+	})
+	.mouseleave(function() {
+	$(this).animate({backgroundColor: "transparent"}, "slow");
+	});*/
+	
+	$("#nav-full").hover(
+	function() {
+	$(this).stop().animate({ backgroundColor: "rgba(0,0,0,0.85)"}, "slow");
+	},
+	function() {
+	$(this).stop().animate({ backgroundColor: "transparent"}, "slow"); 
+	});
+	
+	//hide header on scroll
+	$(function(){
+	var lastScrollTop = 0, delta = 5;
+	$(window).scroll(function(event){
+    var st = $(this).scrollTop();
+
+    if(Math.abs(lastScrollTop - st) <= delta)
+       return;
+
+    if (st > lastScrollTop){
+        // downscroll code
+        $("#nav-full").css({top:'-120px'})
+       //.hover(function(){$("#nav-full").css({top:'0px'})})
+    } else {
+       // upscroll code
+       $("#nav-full").css({top:'0px'});
+    }
+    lastScrollTop = st;
+	});
+	});
+	
+	//mobile menu
+	(function( window ){
+
+    var body = document.body,
+        mask = document.createElement("div"),
+        togglePushLeft = document.querySelector( ".toggle-push-left" ),
+        pushMenuLeft = document.querySelector( ".push-menu-left" ),
+        activeNav
+    ;
+    mask.className = "mask";
+	
+	//push menu left
+    togglePushLeft.addEventListener( "click", function(){
+        classie.add( body, "pml-open" );
+        document.body.appendChild(mask);
+        activeNav = "pml-open";
+    } );
+	
+	//hide active menu if mask is clicked
+    mask.addEventListener( "click", function(){
+        classie.remove( body, activeNav );
+        activeNav = "";
+        document.body.removeChild(mask);
+    } );
+
+    //hide active menu if close menu button is clicked
+    [].slice.call(document.querySelectorAll(".close-menu")).forEach(function(el,i){
+        el.addEventListener( "click", function(){
+            classie.remove( body, activeNav );
+            activeNav = "";
+            document.body.removeChild(mask);
+        } );
+    });
+
+})( window );
+
+
+</script>
+
+</html>
